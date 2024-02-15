@@ -107,3 +107,18 @@ export async function hasTranslationServicesAvailable(code: LanguageCode): Promi
     return false;
   }
 }
+
+/** Checks if given languages is RTL. */
+export async function isRTL(code: LanguageCode): Promise<boolean> {
+  try {
+    const language = await languagesStore.getLanguage(code);
+    if (language) {
+      // TODO here we need to somehow get if the languages is RTL
+      return false;
+    } else {
+      return false;
+    }
+  } catch (error) {
+    return false;
+  }
+}

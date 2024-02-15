@@ -108,6 +108,8 @@
   gap: sizes.$x12;
 }
 
+// This is transcript or translation text displayed as regular non-editable 
+// paragraphs
 .text {
   white-space: pre-wrap;
   border-top: sizes.$x2 solid colors.$kobo-gray-96;
@@ -117,6 +119,7 @@
   flex: 1;
 }
 
+// This is transcript or translation text displayed as editable textarea
 .textarea {
   border: sizes.$x2 solid colors.$kobo-gray-96;
   border-radius: sizes.$x6;
@@ -124,6 +127,12 @@
   resize: none;
   width: 100%;
   flex: 1;
+}
+
+// For displaying RTL languages content correctly
+.text.rtl,
+.textarea.rtl {
+  display: rtl;
 }
 
 .header {
